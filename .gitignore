@@ -14,3 +14,6 @@ public/img/emotes/*.JPEG
 public/img/emotes/*.GIF
 
 !public/img/emotes/.gitkeep
+
+
+*.log
