@@ -1,0 +1,16 @@
+node_modules/
+config.json
+banned-ips.txt
+banned-words.txt
+public/chatlog.txt
+
+public/img/emotes/*.png
+public/img/emotes/*.jpg
+public/img/emotes/*.jpeg
+public/img/emotes/*.gif
+public/img/emotes/*.PNG
+public/img/emotes/*.JPG
+public/img/emotes/*.JPEG
+public/img/emotes/*.GIF
+
+!public/img/emotes/.gitkeep

@@ -1,0 +1,9 @@
+html {
+  color-scheme: dark;
+  text-rendering: optimizeSpeed;
+}
+
+body {
+  background-color: #161421;
+  font-family: 'MS PGothic', 'Mona', 'Noto Sans Mono CJK JP', monospace;
+}

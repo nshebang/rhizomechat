@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/chat.css">
+  <meta http-equiv="cache-control" content="max-age=86400, public">
+  <meta http-equiv="refresh" content="5; url=/chat">
+  <title>chat@ichoria★org</title>
+</head>
+<body>
+  <p>
+    En línea (<%= Object.keys(onlineUsers).length %>):
+    <%
+      const ips = Object.keys(onlineUsers)
+      const maxIter = ips.length <= 20 ?
+      ips.length :
+      20;
+    -%>
+    <% for (let i = 0; i < maxIter; i++) { -%>
+      <% const msgStyle = onlineUsers[ips[i]].color < 7 ?
+        `style="color: ${colors[onlineUsers[ips[i]].color]};"` :
+        'class="rainbow"';
+      -%>
+      <%- `<span ${msgStyle}>` -%>
+      <%= onlineUsers[ips[i]].username + onlineUsers[ips[i]].tripcode; -%>
+      <%- `</span>` -%>
+      <% if (ips.length > 20) { -%>
+      <%= ' ... y otros más.'; -%>
+      <% } -%>
+    <% } -%>
+    <% if (isLoggedIn && user.isAdmin) { -%>
+      <%- `<br><a href="/admin/truncate">clear chat</a>` -%>  
+    <% } -%>
+  </p>
+  <hr>
+  <% chatLog.forEach(msg => {
+    if (!msg.trim().length)
+      return; -%>
+  <%- msg; -%>
+  <% if (isLoggedIn && user.isAdmin) {
+    const match = msg.match(/data-timestamp="(\d+)"/);
+    const timestamp = match ? match[1] : 0; -%>
+  <%- `<a href="/admin/del?timestamp=${timestamp}">del</a> <a href="/admin/ban?timestamp=${timestamp}">ban</a>`; -%>
+  <% } -%>
+  <hr>
+  <% }); -%>
+</body>
+</html>

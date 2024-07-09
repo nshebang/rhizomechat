@@ -1,0 +1,28 @@
+{
+  "name": "rhizomechat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "pm2 start ./ecosystem.config.cjs --env production",
+    "devStart": "nodemon src/index.js",
+    "exportEmotes": "node scripts/export-emotes.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shebang",
+  "license": "AGPL-3.0-only",
+  "dependencies": {
+    "2ch-trip": "^4.0.0",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "dnsbl": "^4.0.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "nconf": "^0.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

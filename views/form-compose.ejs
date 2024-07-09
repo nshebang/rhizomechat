@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/chat.css">
+  <title>chat@ichoria★org</title>
+</head>
+<body>
+  <h1>
+    ichoria
+    <span class="yellow">★</span>
+    <span class="blue">chat &amp; cafe</span>
+  </h1>
+  Nombre <span <%- msgStyle %>><b><%= username %></b><%= tripcode %></span><br>
+  <form target="chatlog" action="/action/send" method="post"
+  onsubmit="setTimeout(() => { document.getElementById('msg').value = ''; }, 200)">
+    Mensaje <input type="text" name="epistula" class="msgbox" id="msg" autofocus>
+    <input type="submit" value="Enviar/refrescar">
+    <input type="reset" value="Limpiar">
+    <div style="display: none;">
+      <input type="text" name="message">
+    </div>
+  </form>
+  <br>
+  <small>
+    <a href="/info#reglas" target="_blank">Reglas</a> •
+    <a href="/info#emotes" target="_blank">Emotes</a> •
+    <a href="/info#tripcodes" target="_blank">Tripcodes</a> •
+    <a href="https://bbs.ichoria.org" target="_blank">BBS</a> •
+    <a href="/action/logout">Salir</a>
+  </small>
+</body>
+</html>

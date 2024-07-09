@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/chat.css">
+  <title>chat@ichoria★org</title>
+</head>
+<body>
+  <h1>
+    ichoria
+    <span class="yellow">★</span>
+    <span class="blue">chat &amp; cafe</span>
+  </h1>
+  <form action="/action/login" method="post">
+    Nombre (opcional) <input name="nomen" type="text" maxlength="60" autofocus>
+    <br>
+    
+    Color
+    <input name="color" id="0" value="0" type="radio" checked>
+    <label for="0" style="color: #e1d9fa;">■</label>
+    <input name="color" id="1" value="1" type="radio">
+    <label for="1" style="color: #ff1638;">■</label>
+    <input name="color" id="2" value="2" type="radio">
+    <label for="2" style="color: #eafc5b;">■</label>
+    <input name="color" id="3" value="3" type="radio">
+    <label for="3" style="color: #6cffcd;">■</label>
+    <input name="color" id="4" value="4" type="radio">
+    <label for="4" style="color: #4287f5;">■</label>
+    <input name="color" id="5" value="5" type="radio">
+    <label for="5" style="color: #ff9932;">■</label>
+    <input name="color" id="6" value="6" type="radio">
+    <label for="6" style="color: #aa42ff;">■</label>
+    <input name="color" id="7" value="7" type="radio">
+    <label for="7" class="rainbow">■</label>
+    <br>
+
+    <input type="submit" value="Entrar al chat">
+    
+    <div style="display: none;">
+      <input name="username" type="text">
+      <input name="email" type="text">
+    </div>
+  </form>
+</body>
+</html>

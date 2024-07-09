@@ -1,0 +1,16 @@
+{
+  "port": 3001,
+  "nameless": "Sin nombre",
+  "capcode": " ## Admin",
+  "bannedMsg": "Tu IP ${ip} está baneada.",
+  "badWordMsg": "Mensaje rechazado por palabra baneada.",
+  "localeString": "es",
+  "maxInactivityMinutes": 15,
+  "staff": {
+    "admin": "password"
+  },
+  "secretKey": "GENERATE THIS WITH OPENSSL",
+  "emotes": {
+    "emote_name": "emote_filename.png"
+  }
+}

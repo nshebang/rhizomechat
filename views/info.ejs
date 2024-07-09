@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/chat.css">
+  <title>información y reglas - chat@ichoria★org</title>
+  <style>
+    body {
+      max-width: 720px;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    ichoria
+    <span class="yellow">★</span>
+    <span class="blue">chat &amp; cafe</span>
+  </h1>
+
+  <p>
+    <a href="/" target="_parent">Volver al chat</a>
+  </p>
+
+  <p>
+    Este es el servicio de chat anónimo de
+    <a href="https://ichoria.org" target="_blank">ichoria.org</a>. 
+    Ichoria chat no requiere activar javascript en el
+    navegador del cliente para funcionar. Este servicio de chat
+    es ligero y totalmente <a href="#licencia">autoalojable</a>.
+  </p>
+  <a name="reglas"></a>
+  <h2>Netiqueta / reglas</h2>
+  <ol>
+    <li>Está prohibido usar el servicio de chat para actividades ilegales
+      bajo las leyes de EEUU</li>
+    <li>Debes ser mayor de edad para usar el chat</li>
+    <li>No se permite enviar mensajes de spam</li>
+    <li>Está prohibido atacar, acosar o insultar a terceros</li>
+    <li>No se permite incitar a otros a romper las reglas</li>
+  </ol>
+  <p>
+    La administración se reserva el derecho de eliminar contenido que no esté
+    alineado con los estándares de calidad del sitio o que haga peligrar la 
+    integridad del proyecto.
+  </p>
+
+  <a name="tripcodes"></a>
+  <h2>Sobre los tripcodes</h2>
+  <p>
+    Este chat es un servicio anónimo y no se requiere una cuenta ni un
+    nombre para participar. La administración anima a los usuarios a no usar 
+    nombres, avatares ni firmas. No obstante, en casos específicos es posible que
+    sea necesario identificar dentro del chat a alguien por cuestiones
+    narrativas o de fiabilidad, y para eso existen los tripcodes.
+  </p>
+
+  <p>
+    Los tripcodes son huellas o "firmas" generadas a través de una contraseña 
+    corta y simple. Cada tripcode es único para cada contraseña. Si quieres 
+    usar un tripcode, escribe lo siguiente en el campo de nombre al entrar al 
+    chat:
+  </p>
+
+  <input type="text" value="tu nombre##tu contraseña">
+
+  <p>Por ejemplo:</p>
+
+  <input type="text" value="Fulanito123##ensalada1">
+
+  <p>
+    La contraseña anterior "ensalada1" generará el siguiente tripcode:
+    "◆Slo/q9H1w.".  Dicho texto representa una firma, y por lo tanto no debes
+    compartir tu contraseña del tripcode si no quieres que alguien más
+    pretenda ser tú. También toma en cuenta  que los tripcodes son
+    relativamente fáciles de <em>crackear</em>, así que no debes usarlos como
+    si fueran firmas PGP. Además, las contraseñas muy largas no sirven y
+    solo generarán "◆???".
+  </p>
+
+  <p>
+    <b>Reiteramos que la administración promueve el anonimato, y no recomienda
+      el uso de tripcodes.</b>
+  </p>
+
+  <a name="emotes"></a>
+  <h2>Emotes</h2>
+
+  <% const keys = Object.keys(emotes); -%> 
+  <p>
+    Este servidor de rhizomechat soporta los siguientes <%= keys.length %>
+    emoticonos:
+  </p>
+
+  <ul>
+  <% for(let i = 0; i < keys.length; i++) { -%>
+    <li><%- `<img src="/img/emotes/${emotes[keys[i]]}" class="emote" load="lazy"> - :${keys[i]}:`; %></li>
+  <% } -%>
+  </ul>
+
+  <a name="logs"></a>
+  <h2>Descargar chatlog público en texto plano</h2>
+  <p>
+    Los mensajes públicos en crudo (HTML) que ves en la página principal
+    están disponibles en texto plano
+    <a href="/chatlog.txt">aquí</a> para usuarios curiosos o programadores que 
+    quieran elaborar su propio <em>frontend</em>.
+  </p>
+
+  <a name="licencia"></a>
+  <h2>Licencia</h2>
+  <p>
+    <a href="https://github.com/nshebang/rhizomechat" target="_blank">
+      rhizomechat
+    </a>
+    es software libre publicado bajo los términos de la
+    <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank">
+      licencia AGPL 3.0
+    </a>. Cualquier persona puede ver y editar el código fuente
+    y hacer su propia versión del software o alojar su propio 
+    servidor de chat. Para más información sobre eso último, favor se 
+    recomienda leer las instrucciones del repositorio Git. Las instancias
+    de rhizomechat no requieren que los usuarios activen javascript en el 
+    navegador, pero el sysadmin sí debe usar javascript en el servidor.
+  </p>
+
+  <a name="privacidad"></a>
+  <h2>Privacidad</h2>
+  <p>Este sitio web se rige bajo la
+    <a href="https://ichoria.org/privacidad.txt" target="_blank">
+      política de privacidad de ichoria.org
+    </a>.
+  </p>
+
+  <a name="contacto"></a>
+  <h2>Contacto</h2>
+  <p>
+    Puedes contactar a la administración a través de la dirección de correo
+    <a href="mailto:admin@ichoria.org">admin@ichoria.org</a>.
+  </p>
+  <a href="#top">▲ Volver arriba</a>
+  <hr>
+</body>
+</html>
