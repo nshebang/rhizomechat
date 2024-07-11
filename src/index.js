@@ -443,7 +443,7 @@ app.post('/action/send', async (req, res) => {
   };
 
   addMessage(message);
-  console.log(`${message.username}${message.tripcode} > ${rawMessage}`);
+  console.log(`${message.username}${message.tripcode} (${ip}) > ${rawMessage}`);
   res.redirect('/chat');
 });
 
