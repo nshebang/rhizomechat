@@ -14,7 +14,7 @@ import path from 'path';
 import fs from 'fs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const VERSION = '1.1.0';
+const VERSION = '1.1.1';
 const app = express();
 const colors = [
   '#e1d9fa',
