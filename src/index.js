@@ -432,7 +432,10 @@ app.post('/action/send', async (req, res) => {
     .replace(/(https?:\/\/\S+)/g, '<a href="$1" target="_blank">$1</a>');
   
   const message = {
-    username: req.user.username,
+    username: req.user.username
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;'),
     tripcode: req.user.tripcode,
     color: req.user.color,
     text: msgText,
